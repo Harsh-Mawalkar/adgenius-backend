@@ -17,14 +17,14 @@ const MYSTIC_API_URL = "https://api.freepik.com/v1/ai/mystic";
 const IMAGEN3_API_URL = "https://api.freepik.com/v1/ai/text-to-image/imagen3";
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/adgenius";
 
-const corsOptions = {
-    origin: 'http://localhost:5173', // Your Vite frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-};
+// const corsOptions = {
+//     origin: 'http://localhost:5173', // Your Vite frontend URL
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     credentials: true
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
